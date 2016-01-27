@@ -1,0 +1,25 @@
+package encapsulation;
+
+public class DigitProgram {
+	Digit digit;
+	
+	void init() {
+		digit.setValue(1);
+		digit.setBase(16);
+	}
+
+	void run() {
+		System.out.println(digit.getValue());
+		digit.increment();
+		System.out.println(digit.getValue());
+		digit.setValue(10);
+		System.out.println(digit.getValue());
+	}
+	
+	public static void main(String[] args) {
+		DigitProgram program = new DigitProgram();
+		program.init();
+		program.run();
+		
+	}
+}
