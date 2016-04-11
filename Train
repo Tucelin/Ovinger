@@ -1,0 +1,47 @@
+package inheritance;
+
+import java.util.ArrayList;
+
+public class Train {
+	private ArrayList<TrainCar> traincars = new ArrayList<TrainCar>();
+	
+	public void addTrainCar(TrainCar tc){
+		traincars.add(tc);
+	}
+	
+	public boolean contains(TrainCar tc){
+		for (TrainCar car : traincars){
+			if (car.equals(tc)){
+				return true;
+			}			
+		}
+		return false;
+	}
+	
+	public int getTotalWeight(){
+		int tempWeight = 0;
+		for (TrainCar tc : traincars){
+			tempWeight += tc.getTotalWeight();
+		}
+		return tempWeight;
+	}
+	
+	public int getPassengerCount(){
+		int passengerCount = 0;
+		for (TrainCar tc : traincars){
+			if (tc.getClass() == PassengerCar){
+				
+			}
+		}
+		return 0;
+	}
+	
+	public int getCargoWeight(){
+		
+		return 0;
+	}
+	
+	public String toString(){
+		return "ingenting";
+	}
+}
