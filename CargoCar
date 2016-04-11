@@ -1,0 +1,21 @@
+package inheritance;
+
+public class CargoCar extends TrainCar{
+
+	private int cargoWeight;
+
+	public CargoCar(int weight, int cargoWeight) {
+		super(weight);
+		this.cargoWeight = cargoWeight;
+		totalWeight = this.weight + cargoWeight;
+	}
+
+	public int getCargoWeight(){
+		return cargoWeight;
+	}
+	
+	public void setCargoWeight(int cargoWeight){
+		this.cargoWeight = cargoWeight;
+		totalWeight = cargoWeight + this.weight;
+	}
+}
