@@ -1,0 +1,23 @@
+package inheritance;
+
+public class PassengerCar extends TrainCar {
+	
+	private int passengers;
+
+	public PassengerCar(int weight, int passengers) {
+		super(weight);
+		this.passengers = passengers;
+		totalWeight = this.weight + passengers*80;
+	}
+	
+	public int getPassengerCount(){
+		return passengers;
+	}
+	
+	public void setPassengerCount(int pc){
+		if (pc > 0){
+			passengers = pc;
+			totalWeight = weight + passengers*80;
+		}
+	}
+}
